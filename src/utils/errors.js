@@ -39,6 +39,9 @@ export class ClientError extends ExtendableError {
   }
 }
 
+/**
+ * @class Generic class for creating Server Error objects 
+*/
 export class ServerError extends ExtendableError {
   constructor(object, param) {
     super(object.message);
