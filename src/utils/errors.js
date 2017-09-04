@@ -24,31 +24,42 @@
 import ExtendableError from 'es6-error';
 
 /**
- * @class Generic class for creating Client Error objects 
+ * @class Generic class for creating Client Error objects
 */
 export class ClientError extends ExtendableError {
-  constructor(object, param) {
-    super(object.message);
+
+  /**
+   * @constructor for creating cleint error errCode
+   * @param {ClientErrorCodes} errCode the error code
+   * @param {string} extra the reason related information
+  */
+  constructor(errCode, extra) {
+    super(errCode.message);
     this.name = this.constructor.name;
-    this.code = object.code;
-    this.message = object.message;
-    this.reason = object.reason + (param || '');
+    this.code = errCode.code;
+    this.message = errCode.message;
+    this.reason = errCode.reason + (extra || '');
   }
+
+  /**
+  * provides the erro info to the client
+  * @return {Object} the error info in json format
+  */
   getErrorForClient() {
     return {"code": this.code, "message": this.message, "reason": this.reason};
   }
 }
 
 /**
- * @class Generic class for creating Server Error objects 
+ * @class Generic class for creating Server Error objects
 */
 export class ServerError extends ExtendableError {
-  constructor(object, param) {
-    super(object.message);
+  constructor(errCode, extra) {
+    super(errCode.message);
     this.name = this.constructor.name;
-    this.code = object.code;
-    this.message = object.message;
-    this.reason = object.reason + (param || '');
+    this.code = errCode.code;
+    this.message = errCode.message;
+    this.reason = errCode.reason + (extra || '');
   }
   getErrorForClient() {
     return {"code": this.code, "message": this.message, "reason": this.reason};
