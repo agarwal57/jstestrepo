@@ -1,5 +1,6 @@
 # jstestrepo
 To verify various aspects of JavaScript learnings
+
 ## Classes
 
 <dl>
@@ -34,7 +35,7 @@ Creates a ClientError object
 
 | Param | Type | Description |
 | --- | --- | --- |
-| errCode | <code>ClientErrorCodes</code> | the error code |
+| errCode | <code>ClientErrorCodes</code> | the client error code |
 | extra | <code>string</code> | the reason related information |
 
 <a name="ClientError+getErrorForClient"></a>
@@ -61,7 +62,7 @@ Creates a ClientError object
 
 | Param | Type | Description |
 | --- | --- | --- |
-| errCode | <code>ClientErrorCodes</code> | the error code |
+| errCode | <code>ClientErrorCodes</code> | the client error code |
 | extra | <code>string</code> | the reason related information |
 
 <a name="ClientError+getErrorForClient"></a>
@@ -90,7 +91,7 @@ Creates a ServerError object
 
 | Param | Type | Description |
 | --- | --- | --- |
-| errCode | <code>ServerrrorCodes</code> | the error code |
+| errCode | <code>ServerrrorCodes</code> | the server error code |
 | extra | <code>string</code> | the reason related information |
 
 <a name="ServerError+getErrorForClient"></a>
@@ -117,7 +118,7 @@ Creates a ServerError object
 
 | Param | Type | Description |
 | --- | --- | --- |
-| errCode | <code>ServerrrorCodes</code> | the error code |
+| errCode | <code>ServerrrorCodes</code> | the server error code |
 | extra | <code>string</code> | the reason related information |
 
 <a name="ServerError+getErrorForClient"></a>

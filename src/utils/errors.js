@@ -28,8 +28,8 @@ export class ClientError extends ExtendableError {
 
   /**
    * Creates a ClientError object
-   * @param {ClientErrorCodes} errCode the error code
-   * @param {string} extra the reason related information
+   * @param {ClientErrorCodes} errCode - the client error code
+   * @param {string} extra - the reason related information
   */
   constructor(errCode, extra) {
     super(errCode.message);
@@ -53,8 +53,8 @@ export class ServerError extends ExtendableError {
 
   /**
    * Creates a ServerError object
-   * @param {ServerrrorCodes} errCode the error code
-   * @param {string} extra the reason related information
+   * @param {ServerrrorCodes} errCode - the server error code
+   * @param {string} extra - the reason related information
   */
   constructor(errCode, extra) {
     super(errCode.message);
