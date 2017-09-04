@@ -23,7 +23,10 @@
 
 import ExtendableError from 'es6-error';
 
-/** Class representing a ClientError */
+/**
+ * Class representing a ClientError
+ * @extends ExtendableError
+ */
 export class ClientError extends ExtendableError {
 
   /**
@@ -48,7 +51,10 @@ export class ClientError extends ExtendableError {
   }
 }
 
-/** Class representing a ServerError */
+/**
+ * Class representing a ServerError
+ * @extends ExtendableError
+ */
 export class ServerError extends ExtendableError {
 
   /**

@@ -4,12 +4,12 @@ To verify various aspects of JavaScript learnings
 ## Classes
 
 <dl>
-<dt><a href="#ClientError">ClientError</a></dt>
+<dt><a href="#ClientError">ClientError</a> ⇐ <code>ExtendableError</code></dt>
 <dd><p>Class representing a ClientError</p>
 </dd>
 <dt><a href="#ClientError">ClientError</a></dt>
 <dd></dd>
-<dt><a href="#ServerError">ServerError</a></dt>
+<dt><a href="#ServerError">ServerError</a> ⇐ <code>ExtendableError</code></dt>
 <dd><p>Class representing a ServerError</p>
 </dd>
 <dt><a href="#ServerError">ServerError</a></dt>
@@ -18,12 +18,13 @@ To verify various aspects of JavaScript learnings
 
 <a name="ClientError"></a>
 
-## ClientError
+## ClientError ⇐ <code>ExtendableError</code>
 Class representing a ClientError
 
 **Kind**: global class
+**Extends**: <code>ExtendableError</code>
 
-* [ClientError](#ClientError)
+* [ClientError](#ClientError) ⇐ <code>ExtendableError</code>
     * [new ClientError(errCode, extra)](#new_ClientError_new)
     * [.getErrorForClient()](#ClientError+getErrorForClient) ⇒ <code>Object</code>
 
@@ -74,12 +75,13 @@ Get the error info to be passed to client
 **Returns**: <code>Object</code> - the error info in json format
 <a name="ServerError"></a>
 
-## ServerError
+## ServerError ⇐ <code>ExtendableError</code>
 Class representing a ServerError
 
 **Kind**: global class
+**Extends**: <code>ExtendableError</code>
 
-* [ServerError](#ServerError)
+* [ServerError](#ServerError) ⇐ <code>ExtendableError</code>
     * [new ServerError(errCode, extra)](#new_ServerError_new)
     * [.getErrorForClient()](#ServerError+getErrorForClient) ⇒ <code>Object</code>
 
