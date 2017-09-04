@@ -1,0 +1,7 @@
+# ES6 to ES5 Conversion #
+#########################
+dist/
+
+# Node Modules #
+################
+node_modules/
