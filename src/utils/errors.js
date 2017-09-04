@@ -23,13 +23,11 @@
 
 import ExtendableError from 'es6-error';
 
-/**
- * @class Generic class for creating Client Error objects
-*/
+/** Class representing a ClientError */
 export class ClientError extends ExtendableError {
 
   /**
-   * @constructor for creating cleint error errCode
+   * Creates a ClientError object
    * @param {ClientErrorCodes} errCode the error code
    * @param {string} extra the reason related information
   */
@@ -42,7 +40,7 @@ export class ClientError extends ExtendableError {
   }
 
   /**
-  * provides the erro info to the client
+  * Get the error info to be passed to client
   * @return {Object} the error info in json format
   */
   getErrorForClient() {
@@ -50,10 +48,14 @@ export class ClientError extends ExtendableError {
   }
 }
 
-/**
- * @class Generic class for creating Server Error objects
-*/
+/** Class representing a ServerError */
 export class ServerError extends ExtendableError {
+
+  /**
+   * Creates a ServerError object
+   * @param {ServerrrorCodes} errCode the error code
+   * @param {string} extra the reason related information
+  */
   constructor(errCode, extra) {
     super(errCode.message);
     this.name = this.constructor.name;
@@ -61,12 +63,16 @@ export class ServerError extends ExtendableError {
     this.message = errCode.message;
     this.reason = errCode.reason + (extra || '');
   }
+
+  /**
+  * Get the error info to be passed to client
+  * @return {Object} the error info in json format
+  */
   getErrorForClient() {
     return {"code": this.code, "message": this.message, "reason": this.reason};
   }
 }
 
-//export const Clienterror = ClientError;
 
 export const ClientErrorCodes = {
 
