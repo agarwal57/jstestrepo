@@ -23,6 +23,11 @@
 
 import ExtendableError from 'es6-error';
 
+/** @module utils/errors */
+
+/** The name of the module. */
+export const name = 'errors';
+
 /**
  * Class representing a ClientError
  * @extends ExtendableError
@@ -59,7 +64,7 @@ export class ServerError extends ExtendableError {
 
   /**
    * Creates a ServerError object
-   * @param {ServerrrorCodes} errCode - the server error code
+   * @param {ServerErrorCodes} errCode - the server error code
    * @param {string} extra - the reason related information
   */
   constructor(errCode, extra) {
@@ -79,7 +84,7 @@ export class ServerError extends ExtendableError {
   }
 }
 
-
+/** The ClientErrorCodes */
 export const ClientErrorCodes = {
 
   // HTTP Status 400 - BAD_REQUEST
@@ -128,6 +133,7 @@ export const ClientErrorCodes = {
 }
 
 
+/** The ServerErrorCodes */
 export const ServerErrorCodes = {
 
   // HTTP Status 500 - INTERNAL_SERVER_ERROR
