@@ -4,13 +4,9 @@
 <dt><a href="#ClientError">ClientError</a> ⇐ <code>ExtendableError</code></dt>
 <dd><p>Class representing a ClientError</p>
 </dd>
-<dt><a href="#ClientError">ClientError</a></dt>
-<dd></dd>
 <dt><a href="#ServerError">ServerError</a> ⇐ <code>ExtendableError</code></dt>
 <dd><p>Class representing a ServerError</p>
 </dd>
-<dt><a href="#ServerError">ServerError</a></dt>
-<dd></dd>
 </dl>
 
 ## Constants
