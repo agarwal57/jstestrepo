@@ -16,6 +16,9 @@
 ## Constants
 
 <dl>
+<dt><a href="#HttpStatus">HttpStatus</a></dt>
+<dd><p>HttpStatus Codes used</p>
+</dd>
 <dt><a href="#ClientErrorCodes">ClientErrorCodes</a></dt>
 <dd><p>ErrorInfos for the Client Errrors</p>
 </dd>
@@ -35,7 +38,7 @@ Class representing a ClientError
 * [ClientError](#ClientError) ⇐ <code>ExtendableError</code>
     * [new ClientError(errCode, [extra])](#new_ClientError_new)
     * [.getErrorInfo()](#ClientError+getErrorInfo) ⇒ <code>Object</code>
-    * [.getHttpStatus()](#ClientError+getHttpStatus) ⇒ <code>number</code>
+    * [.getHttpStatus()](#ClientError+getHttpStatus) ⇒ [<code>HttpStatus</code>](#HttpStatus)
 
 <a name="new_ClientError_new"></a>
 
@@ -57,47 +60,12 @@ Get the error info to be passed to client
 **Returns**: <code>Object</code> - the error info in json format
 <a name="ClientError+getHttpStatus"></a>
 
-### clientError.getHttpStatus() ⇒ <code>number</code>
+### clientError.getHttpStatus() ⇒ [<code>HttpStatus</code>](#HttpStatus)
 Get the http status to be passed to client
 
 **Kind**: instance method of [<code>ClientError</code>](#ClientError)
-**Returns**: <code>number</code> - the http status
+**Returns**: [<code>HttpStatus</code>](#HttpStatus) - the http status
 <a name="ClientError"></a>
-
-## ClientError
-**Kind**: global class
-
-* [ClientError](#ClientError)
-    * [new ClientError(errCode, [extra])](#new_ClientError_new)
-    * [.getErrorInfo()](#ClientError+getErrorInfo) ⇒ <code>Object</code>
-    * [.getHttpStatus()](#ClientError+getHttpStatus) ⇒ <code>number</code>
-
-<a name="new_ClientError_new"></a>
-
-### new ClientError(errCode, [extra])
-Creates a ClientError object
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| errCode | [<code>ClientErrorCodes</code>](#ClientErrorCodes) | the client error code |
-| [extra] | <code>string</code> | the reason related information |
-
-<a name="ClientError+getErrorInfo"></a>
-
-### clientError.getErrorInfo() ⇒ <code>Object</code>
-Get the error info to be passed to client
-
-**Kind**: instance method of [<code>ClientError</code>](#ClientError)
-**Returns**: <code>Object</code> - the error info in json format
-<a name="ClientError+getHttpStatus"></a>
-
-### clientError.getHttpStatus() ⇒ <code>number</code>
-Get the http status to be passed to client
-
-**Kind**: instance method of [<code>ClientError</code>](#ClientError)
-**Returns**: <code>number</code> - the http status
-<a name="ServerError"></a>
 
 ## ServerError ⇐ <code>ExtendableError</code>
 Class representing a ServerError
@@ -108,7 +76,7 @@ Class representing a ServerError
 * [ServerError](#ServerError) ⇐ <code>ExtendableError</code>
     * [new ServerError(errCode, [extra])](#new_ServerError_new)
     * [.getErrorInfo()](#ServerError+getErrorInfo) ⇒ <code>Object</code>
-    * [.getHttpStatus()](#ServerError+getHttpStatus) ⇒ <code>number</code>
+    * [.getHttpStatus()](#ServerError+getHttpStatus) ⇒ [<code>HttpStatus</code>](#HttpStatus)
 
 <a name="new_ServerError_new"></a>
 
@@ -130,46 +98,17 @@ Get the error info to be passed to client
 **Returns**: <code>Object</code> - the error info in json format
 <a name="ServerError+getHttpStatus"></a>
 
-### serverError.getHttpStatus() ⇒ <code>number</code>
+### serverError.getHttpStatus() ⇒ [<code>HttpStatus</code>](#HttpStatus)
 Get the http status to be passed to client
 
 **Kind**: instance method of [<code>ServerError</code>](#ServerError)
-**Returns**: <code>number</code> - the http status
+**Returns**: [<code>HttpStatus</code>](#HttpStatus) - the http status
 <a name="ServerError"></a>
 
-## ServerError
-**Kind**: global class
+## HttpStatus
+HttpStatus Codes used
 
-* [ServerError](#ServerError)
-    * [new ServerError(errCode, [extra])](#new_ServerError_new)
-    * [.getErrorInfo()](#ServerError+getErrorInfo) ⇒ <code>Object</code>
-    * [.getHttpStatus()](#ServerError+getHttpStatus) ⇒ <code>number</code>
-
-<a name="new_ServerError_new"></a>
-
-### new ServerError(errCode, [extra])
-Creates a ServerError object
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| errCode | [<code>ServerErrorCodes</code>](#ServerErrorCodes) | the server error code |
-| [extra] | <code>string</code> | the reason related information |
-
-<a name="ServerError+getErrorInfo"></a>
-
-### serverError.getErrorInfo() ⇒ <code>Object</code>
-Get the error info to be passed to client
-
-**Kind**: instance method of [<code>ServerError</code>](#ServerError)
-**Returns**: <code>Object</code> - the error info in json format
-<a name="ServerError+getHttpStatus"></a>
-
-### serverError.getHttpStatus() ⇒ <code>number</code>
-Get the http status to be passed to client
-
-**Kind**: instance method of [<code>ServerError</code>](#ServerError)
-**Returns**: <code>number</code> - the http status
+**Kind**: global constant
 <a name="ClientErrorCodes"></a>
 
 ## ClientErrorCodes
