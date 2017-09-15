@@ -1,11 +1,8 @@
 ## Classes
 
 <dl>
-<dt><a href="#ClientError">ClientError</a> ⇐ <code>ExtendableError</code></dt>
-<dd><p>Class representing a ClientError</p>
-</dd>
-<dt><a href="#ServerError">ServerError</a> ⇐ <code>ExtendableError</code></dt>
-<dd><p>Class representing a ServerError</p>
+<dt><a href="#CustomApiError">CustomApiError</a> ⇐ <code>ExtendableError</code></dt>
+<dd><p>Class representing a CustomApiError</p>
 </dd>
 </dl>
 
@@ -15,105 +12,59 @@
 <dt><a href="#HttpStatus">HttpStatus</a></dt>
 <dd><p>HttpStatus Codes used</p>
 </dd>
-<dt><a href="#ClientErrorCodes">ClientErrorCodes</a></dt>
-<dd><p>ErrorInfos for the Client Errrors</p>
-</dd>
-<dt><a href="#ServerErrorCodes">ServerErrorCodes</a></dt>
-<dd><p>ErrorInfos for the Server Errrors</p>
+<dt><a href="#ErrorCodes">ErrorCodes</a></dt>
+<dd><p>List of Custom API ErrorInfos</p>
 </dd>
 </dl>
 
-<a name="ClientError"></a>
+<a name="CustomApiError"></a>
 
-## ClientError ⇐ <code>ExtendableError</code>
-Class representing a ClientError
-
-**Kind**: global class
-**Extends**: <code>ExtendableError</code>
-
-* [ClientError](#ClientError) ⇐ <code>ExtendableError</code>
-    * [new ClientError(errCode, [extra])](#new_ClientError_new)
-    * [.getErrorInfo()](#ClientError+getErrorInfo) ⇒ <code>Object</code>
-    * [.getHttpStatus()](#ClientError+getHttpStatus) ⇒ [<code>HttpStatus</code>](#HttpStatus)
-
-<a name="new_ClientError_new"></a>
-
-### new ClientError(errCode, [extra])
-Creates a ClientError object
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| errCode | [<code>ClientErrorCodes</code>](#ClientErrorCodes) | the client error code |
-| [extra] | <code>string</code> | the reason related information |
-
-<a name="ClientError+getErrorInfo"></a>
-
-### clientError.getErrorInfo() ⇒ <code>Object</code>
-Get the error info to be passed to client
-
-**Kind**: instance method of [<code>ClientError</code>](#ClientError)
-**Returns**: <code>Object</code> - the error info in json format
-<a name="ClientError+getHttpStatus"></a>
-
-### clientError.getHttpStatus() ⇒ [<code>HttpStatus</code>](#HttpStatus)
-Get the http status to be passed to client
-
-**Kind**: instance method of [<code>ClientError</code>](#ClientError)
-**Returns**: [<code>HttpStatus</code>](#HttpStatus) - the http status
-<a name="ClientError"></a>
-
-## ServerError ⇐ <code>ExtendableError</code>
-Class representing a ServerError
+## CustomApiError ⇐ <code>ExtendableError</code>
+Class representing a CustomApiError
 
 **Kind**: global class
 **Extends**: <code>ExtendableError</code>
 
-* [ServerError](#ServerError) ⇐ <code>ExtendableError</code>
-    * [new ServerError(errCode, [extra])](#new_ServerError_new)
-    * [.getErrorInfo()](#ServerError+getErrorInfo) ⇒ <code>Object</code>
-    * [.getHttpStatus()](#ServerError+getHttpStatus) ⇒ [<code>HttpStatus</code>](#HttpStatus)
+* [CustomApiError](#CustomApiError) ⇐ <code>ExtendableError</code>
+    * [new CustomApiError(errCode, [extra])](#new_CustomApiError_new)
+    * [.getErrorInfo()](#CustomApiError+getErrorInfo) ⇒ <code>Object</code>
+    * [.getHttpStatus()](#CustomApiError+getHttpStatus) ⇒ [<code>HttpStatus</code>](#HttpStatus)
 
-<a name="new_ServerError_new"></a>
+<a name="new_CustomApiError_new"></a>
 
-### new ServerError(errCode, [extra])
-Creates a ServerError object
+### new CustomApiError(errCode, [extra])
+Creates a CustomApiError object
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| errCode | [<code>ServerErrorCodes</code>](#ServerErrorCodes) | the server error code |
+| errCode | [<code>ErrorCodes</code>](#ErrorCodes) | the custom api error code |
 | [extra] | <code>string</code> | the reason related information |
 
-<a name="ServerError+getErrorInfo"></a>
+<a name="CustomApiError+getErrorInfo"></a>
 
-### serverError.getErrorInfo() ⇒ <code>Object</code>
+### customApiError.getErrorInfo() ⇒ <code>Object</code>
 Get the error info to be passed to client
 
-**Kind**: instance method of [<code>ServerError</code>](#ServerError)
+**Kind**: instance method of [<code>CustomApiError</code>](#CustomApiError)
 **Returns**: <code>Object</code> - the error info in json format
-<a name="ServerError+getHttpStatus"></a>
+<a name="CustomApiError+getHttpStatus"></a>
 
-### serverError.getHttpStatus() ⇒ [<code>HttpStatus</code>](#HttpStatus)
+### customApiError.getHttpStatus() ⇒ [<code>HttpStatus</code>](#HttpStatus)
 Get the http status to be passed to client
 
-**Kind**: instance method of [<code>ServerError</code>](#ServerError)
+**Kind**: instance method of [<code>CustomApiError</code>](#CustomApiError)
 **Returns**: [<code>HttpStatus</code>](#HttpStatus) - the http status
-<a name="ServerError"></a>
+
+<a name="HttpStatus"></a>
 
 ## HttpStatus
 HttpStatus Codes used
 
 **Kind**: global constant
-<a name="ClientErrorCodes"></a>
+<a name="ErrorCodes"></a>
 
-## ClientErrorCodes
-ErrorInfos for the Client Errrors
-
-**Kind**: global constant
-<a name="ServerErrorCodes"></a>
-
-## ServerErrorCodes
-ErrorInfos for the Server Errrors
+## ErrorCodes
+List of Custom API ErrorInfos
 
 **Kind**: global constant
