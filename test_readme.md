@@ -10,10 +10,10 @@
 
 <dl>
 <dt><a href="#HttpStatus">HttpStatus</a></dt>
-<dd><p>HttpStatus Codes used</p>
+<dd><p>List of Http Status Codes</p>
 </dd>
 <dt><a href="#ErrorCodes">ErrorCodes</a></dt>
-<dd><p>List of Custom API ErrorInfos</p>
+<dd><p>List of Custom API ErrorCodes</p>
 </dd>
 </dl>
 
@@ -59,12 +59,12 @@ Get the http status to be passed to client
 <a name="HttpStatus"></a>
 
 ## HttpStatus
-HttpStatus Codes used
+List of Http Status Codes
 
 **Kind**: global constant
 <a name="ErrorCodes"></a>
 
 ## ErrorCodes
-List of Custom API ErrorInfos
+List of Custom API ErrorCodes
 
 **Kind**: global constant
